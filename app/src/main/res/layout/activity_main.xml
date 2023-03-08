@@ -13,7 +13,7 @@
         tools:context=".MainActivity">
 
         <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/appBarLayout"
+            android:id="@+id/appbar_layout"
             style="@style/Theme.AccountSecurity"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -27,14 +27,12 @@
                 app:menu="@menu/menu"/>
         </com.google.android.material.appbar.AppBarLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/main_fragment_container_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.june.android.accountsecurity.SearchFragment"
+            tools:layout="@layout/fragment_search" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
