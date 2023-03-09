@@ -7,10 +7,12 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.june.android.accountsecurity.MainFragment"
-        android:label="MainFragment" >
+        android:label="MainFragment">
         <action
             android:id="@+id/action_mainFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
         <action
             android:id="@+id/action_mainFragment_to_settingFragment"
             app:destination="@id/settingFragment" />
@@ -18,7 +20,7 @@
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.june.android.accountsecurity.SearchFragment"
-        android:label="SearchFragment" >
+        android:label="SearchFragment">
         <action
             android:id="@+id/action_searchFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
@@ -26,7 +28,7 @@
     <fragment
         android:id="@+id/settingFragment"
         android:name="com.june.android.accountsecurity.SettingFragment"
-        android:label="SettingFragment" >
+        android:label="SettingFragment">
         <action
             android:id="@+id/action_settingFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
