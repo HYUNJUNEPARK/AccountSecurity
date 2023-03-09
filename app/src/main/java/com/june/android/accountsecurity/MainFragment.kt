@@ -23,8 +23,8 @@ class MainFragment : Fragment() {
     }
 
     private fun onOptionsItemSelected(view: View) {
-        binding.mainFragmentToolbar.setOnMenuItemClickListener {
-            when(it.itemId) {
+        binding.mainFragmentToolbar.setOnMenuItemClickListener { menuItem ->
+            when(menuItem.itemId) {
                 R.id.item_search -> {
                     Navigation.findNavController(view).navigate((R.id.action_mainFragment_to_searchFragment))
                     true
