@@ -3,7 +3,7 @@ package com.june.android.accountsecurity
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.june.android.accountsecurity.databinding.FragmentSearchBinding
 
 class SearchFragment : Fragment() {
@@ -16,13 +16,12 @@ class SearchFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        onBackButtonClicked(view)
+        onBackButtonClicked()
     }
 
-    private fun onBackButtonClicked(view: View) {
+    private fun onBackButtonClicked() {
         binding.searchFragmentToolbar.setNavigationOnClickListener {
-            Navigation.findNavController(view).navigate((R.id.action_searchFragment_to_mainFragment))
+            findNavController().navigate(R.id.action_searchFragment_to_mainFragment)
         }
     }
 }

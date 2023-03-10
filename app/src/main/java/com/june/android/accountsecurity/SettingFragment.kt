@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.june.android.accountsecurity.databinding.FragmentSettingBinding
 
 class SettingFragment : Fragment() {
@@ -19,12 +20,12 @@ class SettingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        onBackButtonClicked(view)
+        onBackButtonClicked()
     }
 
-    private fun onBackButtonClicked(view: View) {
+    private fun onBackButtonClicked() {
         binding.settingFragmentToolbar.setNavigationOnClickListener {
-            Navigation.findNavController(view).navigate((R.id.action_settingFragment_to_mainFragment))
+            findNavController().navigate((R.id.action_settingFragment_to_mainFragment))
         }
     }
 }
