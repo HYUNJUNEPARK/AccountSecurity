@@ -5,15 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
-import com.june.android.accountsecurity.databinding.FragmentSettingBinding
+import com.june.android.accountsecurity.databinding.FragmentMypageBinding
 
-class SettingFragment : Fragment() {
-    private lateinit var binding: FragmentSettingBinding
+class MyPageFragment : Fragment() {
+    private lateinit var binding: FragmentMypageBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        binding = FragmentSettingBinding.inflate(inflater, container, false)
+        binding = FragmentMypageBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -25,7 +24,7 @@ class SettingFragment : Fragment() {
 
     private fun onBackButtonClicked() {
         binding.settingFragmentToolbar.setNavigationOnClickListener {
-            findNavController().navigate((R.id.action_settingFragment_to_mainFragment))
+            findNavController().navigate((R.id.action_myPageFragment_to_mainFragment))
         }
     }
 }

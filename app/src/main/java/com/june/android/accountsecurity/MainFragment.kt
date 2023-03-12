@@ -31,7 +31,7 @@ class MainFragment : Fragment() {
                     true
                 }
                 R.id.item_setting -> {
-                    findNavController().navigate(R.id.action_mainFragment_to_settingFragment)
+                    findNavController().navigate(R.id.action_mainFragment_to_myPageFragment)
                     true
                 }
                 else -> false

@@ -14,8 +14,8 @@
             app:enterAnim="@anim/from_right"
             app:exitAnim="@anim/to_left" />
         <action
-            android:id="@+id/action_mainFragment_to_settingFragment"
-            app:destination="@id/settingFragment"
+            android:id="@+id/action_mainFragment_to_myPageFragment"
+            app:destination="@id/myPageFragment"
             app:enterAnim="@anim/from_right"
             app:exitAnim="@anim/to_left" />
     </fragment>
@@ -32,11 +32,11 @@
             app:popUpToInclusive="true" />
     </fragment>
     <fragment
-        android:id="@+id/settingFragment"
-        android:name="com.june.android.accountsecurity.SettingFragment"
-        android:label="SettingFragment">
+        android:id="@+id/myPageFragment"
+        android:name="com.june.android.accountsecurity.MyPageFragment"
+        android:label="MyPageFragment">
         <action
-            android:id="@+id/action_settingFragment_to_mainFragment"
+            android:id="@+id/action_myPageFragment_to_mainFragment"
             app:destination="@id/mainFragment"
             app:enterAnim="@anim/from_left"
             app:exitAnim="@anim/to_right"
